@@ -1,0 +1,28 @@
+# --- Entornos Virtuales ---
+# No se suben porque se reconstruyen con el requirements.txt
+.venv/
+venv/
+env/
+ENV/
+
+# --- Cache de Python ---
+# Archivos temporales que genera Python al ejecutarse
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Variables de Entorno y Secretos ---
+# ¡NUNCA subas estos archivos! Contienen tus API Keys
+.env
+.env.local
+
+# --- Configuración de Editores/IDE ---
+# Ajustes específicos de Project IDX o VS Code
+.vscode/
+.idx/
+.history/
+*.log
+
+# --- Archivos de Sistema ---
+.DS_Store
+Thumbs.db
