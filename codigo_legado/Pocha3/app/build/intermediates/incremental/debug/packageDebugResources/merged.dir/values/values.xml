@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pocha</string>
+    <style name="Theme.Pocha" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        
+        <item name="android:statusBarColor">#121212</item>
+    </style>
+</resources>
