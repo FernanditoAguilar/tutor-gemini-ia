@@ -106,6 +106,31 @@ async def process_intent(request: VoiceRequest):
     }
 
 
+"""
+REPORTE DE ACCESIBILIDAD VOICE-API:
+1. Engine: Google Cloud TTS Neural2.
+2. Locale: es-AR (Argentina) para evitar neutralismos robóticos.
+3. Audio Profile: optimized-for-low-frequency-headset (Ideal para audífonos).
+"""
+
+def generate_voice_payload(text_to_speak):
+    # Reporte: Estos valores compensan la pérdida auditiva de frecuencias altas
+    return {
+        "input": {"text": text_to_speak},
+        "voice": {
+            "languageCode": "es-AR",
+            "name": "es-AR-Neural2-A"
+        },
+        "audioConfig": {
+            "audioEncoding": "MP3",
+            "pitch": -4.0,           # Voz más profunda/grave
+            "speakingRate": 0.80,    # 20% más lento para claridad cognitiva
+            "effectsProfileId": ["wearable-class-device"] # Optimiza para audífonos
+        }
+    }
+
+
+
 
 
 if __name__ == "__main__":
